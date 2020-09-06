@@ -50,7 +50,7 @@ git clone https://github.com/AliceTrinta/cooking-website.git
 
 ### Running
 
-First step: configure the archive app.ini according to your prefenrences.
+First step: configure the archive app.ini according to your preferences.
 ```sh
 cooking-website
               |
