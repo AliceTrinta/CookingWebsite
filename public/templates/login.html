@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+    <link href="/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="css/login.css" rel="stylesheet">
+</head>
+<body class="text-center">
+<form action="/checklogin" method="post" class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Login!</h1>
+    <div>
+        <label for="email" class="sr-only">Email address</label>
+        <input type="text" id="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+        <div class="invalid-feedback">
+            Valid name is required.
+        </div>
+    </div>
+    <div>
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+        <div class="invalid-feedback">
+            Valid name is required.
+        </div>
+    </div>
+
+    <simple>
+        <p><a href="/signin">Create an account!</a></p>
+    </simple>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit" name="action">Sign in</button>
+    <footer>
+        <p class="mt-5 mb-3 text-muted">&copy; 2020 - Alice Trinta</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://github.com/AliceTrinta">Github</a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/malicetrinta/">Instagram</a></li>
+            <li class="list-inline-item"><a href="https://www.researchgate.net/profile/Maria_Alice_Lima2/publications">ResearchGate</a></li>
+        </ul>
+    </footer>
+</form>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+<script src="form-validation.js"></script>
+</body>
+</html>
