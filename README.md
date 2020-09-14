@@ -2,7 +2,6 @@
 > Website for save and share recipes.
 
 [![Generic badge](https://img.shields.io/badge/Version-1.0.0-<COLOR>.svg)](https://shields.io/)
-[![Build Status][travis-image]][travis-url]
 [![made-with-Go](https://img.shields.io/badge/Made%20with-Go-1f425f.svg)](http://golang.org)
 
 <!-- TABLE OF CONTENTS -->
