@@ -67,6 +67,9 @@ func SetupRoutes(app *macaron.Macaron) {
 	app.Get("/", handler.Index)
 	app.Get("", handler.Index)
 
+	//Page to list all recipes
+	app.Get("/allRecipes", handler.FindAllRecipes)
+
 	//HealthChecker
 	app.Get("/health", handler.HealthCheck)
 
