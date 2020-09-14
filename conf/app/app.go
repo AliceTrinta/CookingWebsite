@@ -62,9 +62,10 @@ func SetupMiddlewares(app *macaron.Macaron) {
 
 //SetupRoutes defines the routes the Web Application will respond
 func SetupRoutes(app *macaron.Macaron) {
-	app.Get("", func() string {
-		return "Mercurius Works!"
-	})
+
+	//Index page
+	app.Get("/", handler.Index)
+	app.Get("", handler.Index)
 
 	//HealthChecker
 	app.Get("/health", handler.HealthCheck)
