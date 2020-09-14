@@ -1,6 +1,5 @@
 package model
 
-//Model of a recipe
 type Recipe struct {
 	ID 	 	 	int    `json:"id" db:"id"`
 	UserID		int    `json:"userId" db:"userId"`

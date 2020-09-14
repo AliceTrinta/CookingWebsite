@@ -4,6 +4,7 @@ import (
 	"crypto/sha512"
 	"encoding/json"
 	"fmt"
+	"github.com/AliceTrinta/cooking-website/repo"
 	"log"
 	"net"
 	"net/http"
@@ -167,13 +168,13 @@ func CheckFormUserCredentials(ctx *contx.Context, user User) {
 
 // LoginRequired valida a existencia ou nao de cookies para acesso a telas
 func LoginRequired(ctx *contx.Context) {
-	cookie, err := ctx.Req.Cookie(cookieName)
+	cookie, err := ctx.Req.Cookie("RecipeSiteCookie")
 	if err != nil {
 		ctx.Redirect("/login")
 		log.Println("LoginRequired error restoring cookie: ", err)
 		return
 	}
-	token, err := jwt.ParseWithClaims(cookie.Value, &Claims{}, parse)
+	token, err := jwt.ParseWithClaims(cookie.Value, &Claims{}, Parse)
 	if err != nil {
 		ctx.Redirect("/login")
 		log.Println(err)
@@ -187,7 +188,7 @@ func LoginRequired(ctx *contx.Context) {
 			log.Println("LoginRequired error parsing cookie - user id: ", err)
 			return
 		}
-		user, err := GetUserByID(intUserID)
+		user, err := repo.GetUserByID(intUserID)
 		if err != nil {
 			ctx.Redirect("/login")
 			log.Println("LoginRequired error getting user data", err)
@@ -210,7 +211,7 @@ func LoginRequiredAPI(ctx *contx.Context) {
 			return
 		}
 		value := splitted[1]
-		token, err := jwt.ParseWithClaims(value, &Claims{}, parse)
+		token, err := jwt.ParseWithClaims(value, &Claims{}, Parse)
 		if err != nil {
 			ctx.JSON(http.StatusUnauthorized, map[string]string{"error": "Unauthorized"})
 			return
@@ -240,7 +241,7 @@ func LoginRequiredAPISystem(ctx *contx.Context) {
 //LogoutForm handles the request to logout users that has been authenticated via HTTP form
 func LogoutForm(ctx *contx.Context) {
 	InvalidateJWTToken(ctx)
-	ctx.Redirect("/login")
+	ctx.Redirect("/")
 }
 
 //IndexLogin opens login page

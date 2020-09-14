@@ -22,14 +22,14 @@ func CreateJWTCookie(ID string, issuer string, expiration int, ctx *contx.Contex
 		log.Println("CreateJWTCookie error generating JWT: ", err.Error())
 		return
 	}
-	cookie := http.Cookie{Name: cookieName, Value: signedToken, Expires: expireCookie, HttpOnly: true}
+	cookie := http.Cookie{Name: "RecipeSiteCookie", Value: signedToken, Expires: expireCookie, HttpOnly: true}
 	http.SetCookie(ctx.Resp, &cookie)
 	return
 }
 
 // InvalidateJWTToken invalidate jwt token
 func InvalidateJWTToken(ctx *contx.Context) {
-	deleteCookie := http.Cookie{Name: cookieName, Value: "none", Expires: time.Now()}
+	deleteCookie := http.Cookie{Name: "RecipeSiteCookie", Value: "none", Expires: time.Now()}
 	http.SetCookie(ctx.Resp, &deleteCookie)
 }
 
@@ -79,7 +79,7 @@ func ClientEncrypter(key, appName, appID string) (clientID, clientSecret string,
 	return
 }
 
-func parse(token *jwt.Token) (interface{}, error) {
+func Parse(token *jwt.Token) (interface{}, error) {
 	if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
 		return nil, errors.New("Unexpected Signing method")
 	}

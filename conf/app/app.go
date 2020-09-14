@@ -1,20 +1,23 @@
 package app
 
 import (
+	"github.com/AliceTrinta/cooking-website/conf"
+	"github.com/AliceTrinta/cooking-website/handler"
+	"github.com/AliceTrinta/cooking-website/lib/auth"
+	"github.com/AliceTrinta/cooking-website/lib/cache"
+	"github.com/AliceTrinta/cooking-website/lib/contx"
+	"github.com/AliceTrinta/cooking-website/lib/cors"
+	"github.com/AliceTrinta/cooking-website/lib/template"
+	"github.com/AliceTrinta/cooking-website/model"
+	"github.com/go-macaron/binding"
 	mcache "github.com/go-macaron/cache"
 	"github.com/go-macaron/gzip"
 	"github.com/go-macaron/i18n"
 	"github.com/go-macaron/jade"
 	"github.com/go-macaron/session"
 	"github.com/go-macaron/toolbox"
-	"github.com/AliceTrinta/cooking-website/conf"
-	"github.com/AliceTrinta/cooking-website/handler"
-	"github.com/AliceTrinta/cooking-website/lib/cache"
-	"github.com/AliceTrinta/cooking-website/lib/contx"
-	"github.com/AliceTrinta/cooking-website/lib/template"
-	"github.com/AliceTrinta/cooking-website/lib/cors"
-	"gopkg.in/macaron.v1"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
+	"gopkg.in/macaron.v1"
 )
 
 //SetupMiddlewares configures the middlewares using in each web request
@@ -67,8 +70,23 @@ func SetupRoutes(app *macaron.Macaron) {
 	app.Get("/", handler.Index)
 	app.Get("", handler.Index)
 
-	//Page to list all recipes
 	app.Get("/allRecipes", handler.FindAllRecipes)
+
+	app.Get("/profile", auth.LoginRequired, handler.ShowProfile)
+
+	app.Get("/addRecipe", auth.LoginRequired, handler.AddRecipe)
+	app.Post("/insertrecipe", binding.Bind(model.Recipe{}), handler.InsertRecipe)
+
+	app.Get("/signin", handler.Signin)
+	app.Post("/insertuser", binding.Bind(model.User{}), handler.InsertUser)
+
+	app.Get("/login", auth.IndexLogin)
+	app.Post("/checklogin", binding.Bind(model.User{}), handler.Login)
+
+	app.Get("/logout", auth.LogoutForm)
+
+
+	//app.Get("/profile", handler.Index)
 
 	//HealthChecker
 	app.Get("/health", handler.HealthCheck)
