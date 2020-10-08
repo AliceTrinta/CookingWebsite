@@ -7,8 +7,8 @@ import (
 	"os"
 	"strconv"
 
-	config "github.com/AliceTrinta/cooking-website/conf"
-	conf "github.com/AliceTrinta/cooking-website/conf/app"
+	config "github.com/AliceTrinta/CookingWebsite/conf"
+	conf "github.com/AliceTrinta/CookingWebsite/conf/app"
 )
 
 // application entrypoint

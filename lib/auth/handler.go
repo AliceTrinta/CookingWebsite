@@ -4,7 +4,7 @@ import (
 	"crypto/sha512"
 	"encoding/json"
 	"fmt"
-	"github.com/AliceTrinta/cooking-website/repo"
+	"github.com/AliceTrinta/CookingWebsite/repo"
 	"log"
 	"net"
 	"net/http"
@@ -15,8 +15,8 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"github.com/novatrixtech/cryptonx"
 
-	"github.com/AliceTrinta/cooking-website/conf"
-	"github.com/AliceTrinta/cooking-website/lib/contx"
+	"github.com/AliceTrinta/CookingWebsite/conf"
+	"github.com/AliceTrinta/CookingWebsite/lib/contx"
 )
 
 //InitializeUserCredentials stores user's credentials at OAuth Database

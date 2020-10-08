@@ -5,7 +5,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/AliceTrinta/cooking-website/conf"
+	"github.com/AliceTrinta/CookingWebsite/conf"
 )
 
 //AddAccessTokenAccessLog adds log when an user call the API using an Access Token

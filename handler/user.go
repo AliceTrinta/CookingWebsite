@@ -2,10 +2,10 @@ package handler
 
 import (
 	"fmt"
-	"github.com/AliceTrinta/cooking-website/lib/auth"
-	"github.com/AliceTrinta/cooking-website/lib/contx"
-	"github.com/AliceTrinta/cooking-website/model"
-	"github.com/AliceTrinta/cooking-website/repo"
+	"github.com/AliceTrinta/CookingWebsite/lib/auth"
+	"github.com/AliceTrinta/CookingWebsite/lib/contx"
+	"github.com/AliceTrinta/CookingWebsite/model"
+	"github.com/AliceTrinta/CookingWebsite/repo"
 	"github.com/dgrijalva/jwt-go"
 	"log"
 	"net/http"

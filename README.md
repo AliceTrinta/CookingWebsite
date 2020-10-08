@@ -44,14 +44,14 @@ Firs: Install MySql database in your machine.
 
 Clone repository
 ```sh
-git clone https://github.com/AliceTrinta/cooking-website.git
+git clone https://github.com/AliceTrinta/CookingWebsite.git
 ```
 
 ### Running
 
 First step: configure the archive app.ini according to your preferences.
 ```sh
-cooking-website
+CookingWebsite
               |
               ---conf
                     |
@@ -91,14 +91,14 @@ Study content to help people understand Go for web development with frameworks.
 Alice Trinta – [@malicetrinta](https://www.instagram.com/malicetrinta/) – maria.trinta@aluno.cefet-rj.br
 
 [https://www.researchgate.net/profile/Maria_Alice_Lima2/publications](https://www.researchgate.net/profile/Maria_Alice_Lima2/publications)
-Project Link: [https://github.com/AliceTrinta/cooking-website](https://github.com/AliceTrinta/cooking-website)
+Project Link: [https://github.com/AliceTrinta/CookingWebsite](https://github.com/AliceTrinta/CookingWebsite)
 
 
 
 <!-- CONTRIBUTING -->
 ## Contributing
 
-1. Fork it (<https://github.com/AliceTrinta/cooking-website>)
+1. Fork it (<https://github.com/AliceTrinta/CookingWebsite>)
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)

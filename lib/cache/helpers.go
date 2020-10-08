@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/AliceTrinta/cooking-website/lib/contx"
+	"github.com/AliceTrinta/CookingWebsite/lib/contx"
 )
 
 /*

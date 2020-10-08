@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"github.com/AliceTrinta/cooking-website/conf"
-	"github.com/AliceTrinta/cooking-website/lib/contx"
+	"github.com/AliceTrinta/CookingWebsite/conf"
+	"github.com/AliceTrinta/CookingWebsite/lib/contx"
 	"net/http"
 )
 

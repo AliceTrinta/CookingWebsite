@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/AliceTrinta/cooking-website/conf"
+	"github.com/AliceTrinta/CookingWebsite/conf"
 	"github.com/novatrixtech/cryptonx"
 )
 

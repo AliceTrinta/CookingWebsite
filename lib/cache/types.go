@@ -4,7 +4,7 @@ import (
 	"github.com/go-macaron/cache"
 	_ "github.com/go-macaron/cache/memcache"
 	_ "github.com/go-macaron/cache/redis"
-	"github.com/AliceTrinta/cooking-website/conf"
+	"github.com/AliceTrinta/CookingWebsite/conf"
 )
 
 var (

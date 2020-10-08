@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/AliceTrinta/cooking-website/conf"
+	"github.com/AliceTrinta/CookingWebsite/conf"
 )
 
 //GetEnvironmentParameter get environment parameter from OS variables or from ini file

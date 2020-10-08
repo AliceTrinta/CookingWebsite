@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
-	"github.com/AliceTrinta/cooking-website/conf"
-	"github.com/AliceTrinta/cooking-website/lib/contx"
+	"github.com/AliceTrinta/CookingWebsite/conf"
+	"github.com/AliceTrinta/CookingWebsite/lib/contx"
 	"github.com/novatrixtech/cryptonx"
 )
 

@@ -1,14 +1,14 @@
 package app
 
 import (
-	"github.com/AliceTrinta/cooking-website/conf"
-	"github.com/AliceTrinta/cooking-website/handler"
-	"github.com/AliceTrinta/cooking-website/lib/auth"
-	"github.com/AliceTrinta/cooking-website/lib/cache"
-	"github.com/AliceTrinta/cooking-website/lib/contx"
-	"github.com/AliceTrinta/cooking-website/lib/cors"
-	"github.com/AliceTrinta/cooking-website/lib/template"
-	"github.com/AliceTrinta/cooking-website/model"
+	"github.com/AliceTrinta/CookingWebsite/conf"
+	"github.com/AliceTrinta/CookingWebsite/handler"
+	"github.com/AliceTrinta/CookingWebsite/lib/auth"
+	"github.com/AliceTrinta/CookingWebsite/lib/cache"
+	"github.com/AliceTrinta/CookingWebsite/lib/contx"
+	"github.com/AliceTrinta/CookingWebsite/lib/cors"
+	"github.com/AliceTrinta/CookingWebsite/lib/template"
+	"github.com/AliceTrinta/CookingWebsite/model"
 	"github.com/go-macaron/binding"
 	mcache "github.com/go-macaron/cache"
 	"github.com/go-macaron/gzip"

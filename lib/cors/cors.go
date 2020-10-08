@@ -1,7 +1,7 @@
 package cors
 
 import (
-	"github.com/AliceTrinta/cooking-website/lib/contx"
+	"github.com/AliceTrinta/CookingWebsite/lib/contx"
 	"gopkg.in/macaron.v1"
 )
 
